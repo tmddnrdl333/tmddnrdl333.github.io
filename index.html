@@ -1,305 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume - Seungwook Jung</title>
-  <meta name="description" content="Resume of Seungwook Jung (Backend Engineer) — education, experience, projects, skills." />
-
   <style>
-    :root{
-      --bg: #f6f7f9;
-      --paper: #ffffff;
-      --text: #111827;
-      --muted: #4b5563;
-      --border: #e5e7eb;
-      --border-strong: #d1d5db;
-      --accent: #111827; /* keep it neutral for a formal look */
-    }
-
-    * { box-sizing: border-box; }
-
-    body{
-      margin: 0;
-      padding: 36px 16px;
-      background: var(--bg);
-      color: var(--text);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      padding: 20px;
+      background-color: #f4f4f4;
+      color: #111;
       line-height: 1.6;
-      font-size: 15px;
     }
-
-    a{
-      color: inherit;
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 24px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      color: #333;
+      margin-top: 24px;
+    }
+    h1 {
+      margin-top: 0;
+    }
+    .subtitle {
+      margin-top: 6px;
+      color: #555;
+    }
+    .contact {
+      margin-top: 12px;
+      color: #444;
+      font-size: 14px;
+    }
+    .contact a {
+      color: #333;
       text-decoration: underline;
-      text-decoration-color: rgba(17,24,39,0.35);
-      text-underline-offset: 3px;
     }
-    a:hover{
-      text-decoration-color: rgba(17,24,39,0.7);
+    .section {
+      margin-top: 18px;
     }
-
-    .page{
-      max-width: 900px;
-      margin: 0 auto;
-      background: var(--paper);
-      border: 1px solid var(--border-strong);
+    .item-title {
+      font-weight: bold;
+      margin-bottom: 4px;
     }
-
-    header{
-      padding: 28px 28px 18px;
-      border-bottom: 2px solid var(--border);
-    }
-
-    h1{
-      margin: 0;
-      font-size: 26px;
-      letter-spacing: -0.2px;
-      font-weight: 750;
-    }
-
-    .headline{
-      margin: 8px 0 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .contact{
-      margin-top: 14px;
-      color: var(--muted);
-      font-size: 13.5px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px 14px;
-    }
-    .contact span{
-      white-space: nowrap;
-    }
-    .contact span::after{
-      content: "•";
-      margin-left: 14px;
-      color: var(--border-strong);
-    }
-    .contact span:last-child::after{
-      content: "";
-      margin: 0;
-    }
-
-    main{
-      padding: 22px 28px 28px;
-    }
-
-    section{
-      padding: 18px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    section:last-child{
-      border-bottom: 0;
-    }
-
-    .section-title{
-      margin: 0 0 12px;
+    .item-meta {
+      color: #666;
       font-size: 13px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      font-weight: 700;
+      margin-bottom: 6px;
     }
-
-    .item{
-      padding: 12px 0;
-    }
-    .item + .item{
-      border-top: 1px solid var(--border);
-    }
-
-    .row{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 6px 12px;
-      align-items: baseline;
-    }
-
-    .role{
-      font-weight: 700;
-      color: var(--accent);
-    }
-
-    .meta{
-      color: var(--muted);
-      font-size: 13.5px;
-    }
-
-    ul{
-      margin: 10px 0 0 18px;
-      padding: 0;
-    }
-    li{
-      margin: 6px 0;
-    }
-
-    .two-col{
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 18px;
-    }
-
-    .kv{
-      color: var(--text);
-      font-size: 14px;
-    }
-    .kv b{
-      color: var(--muted);
-      font-weight: 700;
-    }
-    .kv + .kv{
+    ul {
       margin-top: 8px;
-    }
-
-    footer{
-      padding: 14px 28px 18px;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    @media (min-width: 860px){
-      .two-col{ grid-template-columns: 1fr 1fr; }
-    }
-
-    @media print{
-      body{ background: #fff; padding: 0; }
-      .page{ border: 0; }
-      a{ text-decoration: none; }
-      header{ border-bottom: 1px solid #ddd; }
-      section{ border-bottom: 1px solid #ddd; }
     }
   </style>
 </head>
 
 <body>
-  <div class="page">
-    <header>
-      <h1>Seungwook Jung</h1>
-      <p class="headline">Backend Engineer · Spring Boot / Kotlin / Java · ML-driven services (LLM, RAG)</p>
+  <div class="container">
+    <h1>Seungwook Jung</h1>
 
-      <div class="contact" aria-label="Contact">
-        <span>GitHub: <a href="https://github.com/tmddnrdl333">tmddnrdl333</a></span>
-        <span>Blog: <a href="https://tmddnrdl333.github.io">tmddnrdl333.github.io</a></span>
-        <span>Email: <a href="mailto:tmddnrdl333@hanyang.ac.kr">tmddnrdl333@hanyang.ac.kr</a></span>
-        <span>Phone: +82 10-7999-1732</span>
-      </div>
-    </header>
+    <div class="contact">
+      GitHub: <a href="https://github.com/tmddnrdl333">tmddnrdl333</a>  |
+      Email: <a href="mailto:tmddnrdl333@hanyang.ac.kr">tmddnrdl333@hanyang.ac.kr</a> |
+      Phone: +82 10-7999-1732
+    </div>
 
-    <main>
-      <section>
-        <h2 class="section-title">Education</h2>
-        <div class="item">
-          <div class="row">
-            <div class="role">Hanyang University — B.S. in Mechanical Engineering</div>
-            <div class="meta">Mar 2016 – Feb 2022</div>
-          </div>
-        </div>
-      </section>
+    <div class="section">
+      <h2>Academic Background</h2>
+      <ul>
+        <li>B.S. in Mechanical Engineering - Hanyang University (Mar 2016 - Feb 2022)</li>
+        <li>Completed the Java Specialization Track at SSAFY (Samsung Software Academy for Youth) (Jan 2022 - Dec 2022)</li>
+      </ul>
+    </div>
 
-      <section>
-        <h2 class="section-title">Work Experience</h2>
-        <div class="item">
-          <div class="row">
-            <div class="role">Midas IT — Backend Engineer</div>
-            <div class="meta">May 2023 – Present</div>
-          </div>
-          <ul>
-            <li>Developed backend services for Korea’s leading hiring platform, supporting nationwide open recruitment and high-volume applicant traffic.</li>
-            <li>Built and maintained backend systems for admin, evaluator, and applicant portals in a multi-tenant environment.</li>
-            <li>Implemented recruitment workflows (application processing, evaluation features, real-time assessment modules) using Spring Boot, Kotlin/Java, Redis, Kafka, and MySQL.</li>
-            <li>Collaborated on ML-driven features, including LLM-based job posting generation and RAG-based document review.</li>
-          </ul>
-        </div>
-      </section>
+    <div class="section">
+      <h2>Professional Experience</h2>
+      <div class="item-title">Backend Engineer - Midas IT</div>
+      <div class="item-meta">May 2023 - Present</div>
+      <ul>
+        <li>Developed backend services for Korea’s leading hiring platform, supporting nationwide open recruitment and high-volume applicant traffic.</li>
+        <li>Built and maintained backend systems for admin, evaluator, and applicant portals in a multi-tenant environment.</li>
+        <li>Implemented recruitment workflows (application processing, evaluation features, real-time assessment modules) using Spring Boot, Kotlin/Java, Redis, Kafka, and MySQL.</li>
+        <li>Collaborated on ML-driven features, including LLM-based job posting generation and RAG-based document review.</li>
+      </ul>
+    </div>
 
-      <section>
-        <h2 class="section-title">Projects</h2>
+    <div class="section">
+      <h2>Projects</h2>
 
-        <div class="item">
-          <div class="row">
-            <div class="role">Retrieval-Augmented Legal Review Pipeline</div>
-            <div class="meta">Aug 2025</div>
-          </div>
-          <ul>
-            <li>Developed a RAG-based pipeline for automated legal compliance checks on recruitment documents.</li>
-            <li>Implemented PDF text extraction, chunking, embedding, and MySQL-based indexing.</li>
-            <li>Evaluated retrieval precision, latency, and embedding granularity to optimize end-to-end performance.</li>
-          </ul>
-        </div>
+      <div class="item-title">Retrieval-Augmented Legal Review Pipeline</div>
+      <div class="item-meta">Aug 2025</div>
+      <ul>
+        <li>Developed a RAG-based pipeline for automated legal compliance checks on recruitment documents.</li>
+        <li>Implemented PDF text extraction, chunking, embedding, and MySQL-based indexing.</li>
+        <li>Evaluated retrieval precision, latency, and embedding granularity to optimize end-to-end performance.</li>
+      </ul>
 
-        <div class="item">
-          <div class="row">
-            <div class="role">LLM-Based Job Posting HTML Generator</div>
-            <div class="meta">May 2025</div>
-          </div>
-          <ul>
-            <li>Built an LLM-driven system that generates job-posting HTML templates based on user-defined settings.</li>
-            <li>Redesigned backend architecture to split long-running inference into parallel tasks and stream partial outputs using Redis Pub/Sub and Server-Sent Events.</li>
-            <li>Resolved multi-layer timeout issues and improved reliability.</li>
-          </ul>
-        </div>
+      <div class="item-title" style="margin-top: 14px;">LLM-Based Job Posting HTML Generator</div>
+      <div class="item-meta">May 2025</div>
+      <ul>
+        <li>Built an LLM-driven system that generates job-posting HTML templates based on user-defined settings.</li>
+        <li>Redesigned backend architecture to split long-running inference into parallel tasks and stream partial outputs using Redis Pub/Sub and Server-Sent Events.</li>
+        <li>Resolved multi-layer timeout issues and improved reliability.</li>
+      </ul>
 
-        <div class="item">
-          <div class="row">
-            <div class="role">Real-Time Notification System for Parallel LLM Requests</div>
-            <div class="meta">May 2025</div>
-          </div>
-          <ul>
-            <li>Designed an SSE-based real-time status streaming system integrated with Redis Pub/Sub for parallel LLM workflows.</li>
-            <li>Enabled live progress updates during multi-step or multi-request LLM operations, improving transparency and responsiveness.</li>
-          </ul>
-        </div>
-      </section>
+      <div class="item-title" style="margin-top: 14px;">Real-Time Notification System for Parallel LLM Requests</div>
+      <div class="item-meta">May 2025</div>
+      <ul>
+        <li>Designed an SSE-based real-time status streaming system integrated with Redis Pub/Sub for parallel LLM workflows.</li>
+        <li>Enabled live progress updates during multi-step or multi-request LLM operations, improving transparency and responsiveness.</li>
+      </ul>
+    </div>
 
-      <section>
-        <h2 class="section-title">Training</h2>
-        <div class="item">
-          <div class="row">
-            <div class="role">SSAFY (Samsung Software Academy for Youth)</div>
-            <div class="meta">Jan 2022 – Dec 2022</div>
-          </div>
-          <ul>
-            <li>Strengthened Object-Oriented programming principles through in-depth learning and practical application of Java.</li>
-            <li>Sharpened Java programming skills and gained expertise in Data Structures and Algorithms.</li>
-            <li>Developed proficiency in Spring / Spring Boot and relational databases.</li>
-          </ul>
-        </div>
-      </section>
+    <div class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li><b>Programming Languages:</b> Java, Kotlin, Python, C, C++, JavaScript</li>
+        <li><b>Frameworks / Tools:</b> Spring, Spring Boot, SQL (MySQL, MariaDB), Redis, Kafka, WebSocket, SSE</li>
+      </ul>
+    </div>
 
-      <section>
-        <div class="two-col">
-          <div>
-            <h2 class="section-title">Skills</h2>
-            <div class="item" style="border-top:0;">
-              <div class="kv"><b>Programming Languages</b> Java, Kotlin, Python, C, C++, JavaScript</div>
-              <div class="kv"><b>Frameworks / Tools</b> Spring, Spring Boot, SQL (MySQL, MariaDB), Redis, Kafka, WebSocket, SSE</div>
-            </div>
-          </div>
-
-          <div>
-            <h2 class="section-title">Language Proficiency</h2>
-            <div class="item" style="border-top:0;">
-              <ul style="margin-top:0;">
-                <li>English: iBT TOEFL 94</li>
-                <li>Korean: Native</li>
-                <li>Chinese: HSK Level 6 (295/300)</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      Last updated: Dec 14, 2025
-    </footer>
+    <div class="section">
+      <h2>Language Proficiency</h2>
+      <ul>
+        <li>English: iBT TOEFL 94</li>
+        <li>Korean: Native</li>
+        <li>Chinese: HSK Level 6 (295/300)</li>
+      </ul>
+    </div>
   </div>
 </body>
 </html>
